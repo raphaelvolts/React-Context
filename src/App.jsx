@@ -1,14 +1,39 @@
 import { useState } from "react";
-import { CssBaseline } from "@mui/material";
+/* import { CssBaseline, ThemeProvider } from "@mui/material"; */
 import Navbar from "./Navbar";
+import { useTheme, createTheme, useColorScheme } from "@mui/material/styles";
+import Form from "./Form";
+import PageContent from "./PageContent";
+import { ThemeProvider } from "./Contexts/ThemeContext";
+import { LanguageProvider } from "./Contexts/LanguageContext";
+
 /* import "./App.css"; */
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const theme = createTheme({
+    colorSchemes: {
+      light: true,
+      dark: true
+    },
+    cssVariables: {
+      colorSchemeSelector: "class"
+    }
+  });
+  console.log(theme);
+  theme.applyStyles("dark");
+  const { mode, setMode } = useColorScheme();
+  setMode("dark");
   return (
     <>
-      <Navbar />
+      <ThemeProvider>
+        <LanguageProvider>
+          <PageContent>
+            <Navbar theme={theme} />
+            <Form theme={theme} />
+          </PageContent>
+        </LanguageProvider>
+      </ThemeProvider>
     </>
   );
 }

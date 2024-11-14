@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap");
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, "Noto Color Emoji",
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -12,7 +14,19 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
 
+  min-width: 320px;
+  min-height: 100vh;
+}
+/* #root {
+  padding: 0;
+  margin: 0;
+} */
+/* 
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,13 +36,7 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+
 
 h1 {
   font-size: 3.2em;
@@ -66,3 +74,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+ */
