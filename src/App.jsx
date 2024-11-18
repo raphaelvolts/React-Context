@@ -20,7 +20,7 @@ function App() {
       colorSchemeSelector: "class"
     }
   });
-  console.log(theme);
+
   theme.applyStyles("dark");
   const { mode, setMode } = useColorScheme();
   setMode("dark");
@@ -29,8 +29,8 @@ function App() {
       <ThemeProvider>
         <LanguageProvider>
           <PageContent>
-            <Navbar theme={theme} />
-            <Form theme={theme} />
+            <Navbar />
+            <Form />
           </PageContent>
         </LanguageProvider>
       </ThemeProvider>

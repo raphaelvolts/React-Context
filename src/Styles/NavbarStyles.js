@@ -20,6 +20,9 @@ const styles = (theme) => ({
       display: "block"
     }
   },
+  emoji: {
+    fontFamily: "Noto Color Emoji"
+  },
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
